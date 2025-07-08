@@ -1,0 +1,106 @@
+/* Reset and Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(135deg, #9393b0, #2f6aa4);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  
+}
+
+/* Calculator Container */
+#calculator {
+  background-color: #38384b;
+  border-radius: 15px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Display */
+#display {
+  width: 100%;
+  height: 70px;
+  font-size: 26px;
+  text-align: right;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #44475a;
+  color: #ffffff;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Button Grid - 3 Buttons per Row */
+.button_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 buttons per row */
+  gap: 10px;
+  justify-content: center;
+}
+
+/* Common Button Styling */
+.button {
+  height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  background-color: #4e4e61;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.button:hover {
+  background-color: #5c5c75;
+  transform: scale(1.05);
+}
+
+.button:active {
+  background-color: #3a3a50;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Operator Buttons */
+.button.operator {
+  background-color: #ff7f50;
+}
+.button.operator:hover {
+  background-color: #ff6333;
+}
+.button.operator:active {
+  background-color: #e2551a;
+}
+
+/* Clear Button */
+.button.clear {
+  background-color: #e74c3c;
+}
+.button.clear:hover {
+  background-color: #c0392b;
+}
+.button.clear:active {
+  background-color: #992d22;
+}
+
+/* Equal Button */
+.button.equal {
+  background-color: #00cc99;
+  grid-column: span 1; /* Make it full-width across 3 columns */
+}
+.button.equal:hover {
+  background-color: #00b386;
+}
+.button.equal:active {
+  background-color: #009973;
+}
